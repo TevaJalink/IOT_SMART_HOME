@@ -33,7 +33,7 @@ class NotificationService:
         topic = msg.topic
         message = msg.payload.decode("utf-8")
         ic(f"Received message from topic {topic}: {message}")
-        self.send_email(f"DCsafe-sytem Critical Alert {topic}", message)
+        self.send_email(f"DC-monitoring-system Critical Alert {topic}", message)
 
     def on_log(self, client, userdata, level, buf):
         ic(f"MQTT Log: {buf}")
